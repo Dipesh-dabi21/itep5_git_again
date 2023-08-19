@@ -1,0 +1,15 @@
+<script>
+    var promise= new Promise(function(resolve,reject){
+        resolve("resolved value");
+        // reject("Error generated");
+    })
+    promise.finally(()=>{
+        document.write("<br>finally called");
+        console.log(promise);
+    })
+    promise.catch(function(result){
+        document.write("<br>result : "+result);
+        console.log(promise);
+    });
+</script>
+
